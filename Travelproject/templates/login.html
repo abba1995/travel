@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sign up</title>
+    <style>
+    .form_login {
+
+justify-content: center;
+display: flex;
+margin: 100px 500px;
+border: 3px solid darkgreen;
+padding: 30px;
+<!--background-color: rgb(208, 205, 248);-->
+}
+
+    </style>
+</head>
+{% load static %}
+<body style="background-image:url('{% static 'images/bg3.jpg' %}'); background-size:100%">
+<div class="form_login" >
+<form  action="login" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter username"><br><br>
+    <input type="password" name="password" placeholder="Enter password"><br><br>
+    <input type="submit">
+</form>
+</div>
+</body>
+</html>
